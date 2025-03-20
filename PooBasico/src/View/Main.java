@@ -101,6 +101,8 @@ public class Main {
         for (Persona p : b.getListaPersonas()){
             if(p.getsDni().equals(dni)){
                 System.out.printf(b.getPersona(dni).toString());
+            }else {
+                System.out.println("No encontrado");
             }
         }
     }
