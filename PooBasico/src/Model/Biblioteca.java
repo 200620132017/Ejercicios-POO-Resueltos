@@ -53,4 +53,22 @@ public class Biblioteca {
         }
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Biblioteca{" +
+                "iId=" + iId +
+                ", sNombre='" + sNombre + '\'' +
+                ", listaPersonas=" + listaPersonas +
+                mostrarPersonas ()+
+                '}';
+    }
+
+    private String mostrarPersonas() {
+        String s = "";
+        for(Persona p: this.listaPersonas){
+            s += p.toString() + "\n";
+        }
+        return s;
+    }
 }

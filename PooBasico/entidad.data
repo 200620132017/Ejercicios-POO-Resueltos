@@ -1,0 +1,5 @@
+Biblioteca{iId=1, sNombre='BibliotecaSamuel', listaPersonas=[Persona{sDni='s', sApellido='s', sNombre='s'}, Persona{sDni='g', sApellido='g', sNombre='g'}, Persona{sDni='r', sApellido='r', sNombre='r'}, Persona{sDni='h', sApellido='h', sNombre='h'}]Persona{sDni='s', sApellido='s', sNombre='s'}
+Persona{sDni='g', sApellido='g', sNombre='g'}
+Persona{sDni='r', sApellido='r', sNombre='r'}
+Persona{sDni='h', sApellido='h', sNombre='h'}
+}

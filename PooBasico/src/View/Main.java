@@ -2,6 +2,10 @@ package View;
 import Model.Biblioteca;
 import Model.Persona;
 
+import javax.imageio.IIOException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -21,7 +25,7 @@ public class Main {
         System.out.println("2. Eliminar Persona de biblioteca");
         System.out.println("3. Buscar Persona de biblioteca");
         System.out.println("4. Mostrar todas las personas de biblioteca");
-        System.out.println("5. Añadir libro a persona");
+        System.out.println("5. Grabar en biblioteca");
         System.out.println("6. Eliminar libro a persona");
         System.out.println("7. Buscar libro a persona");
         System.out.println("8. Mostrar todas las libros");
@@ -43,6 +47,7 @@ public class Main {
                 listarPersonas(biblioteca);
                 break;
             case 5:
+                grabarBiblioteca(biblioteca);
                 break;
             case 6:
                 break;
@@ -53,6 +58,19 @@ public class Main {
             case 9:
                 break;
 
+        }
+    }
+
+    private static void grabarBiblioteca(Biblioteca biblioteca) {
+        String nombreFichero = "entidad.data";
+        PrintWriter out = null ;
+        try {
+            out = new PrintWriter(new FileWriter(nombreFichero));
+            out.println(biblioteca.toString());
+        }catch (IOException exception){
+            System.out.println(exception.getMessage());
+        } finally {
+            if(out!=null) out.close();
         }
     }
 
